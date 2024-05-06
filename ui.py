@@ -1,6 +1,7 @@
-# ch 5.2.1 ui.py
+# ch 6.3.2 ui.py
 
 ## main.py의 Calculator 클래스에서 화면정의, 초기화, 에디트 화면처리 분리
+## activateMessage 인자로 받은 text 출력하기
 
 from PyQt5.QtWidgets import (
     QApplication,
@@ -63,9 +64,9 @@ class View(QWidget):
         self.resize(256, 256)
         self.show()
 
-    def activeMessage(self):
+    def activeMessage(self, text):
         # QMessageBox.information(self, "information", "Button clicked!")
-        self.te1.appendPlainText("Button Clicked!")
+        self.te1.appendPlainText(text)
 
     def clearMessage(self):
         self.te1.clear()
