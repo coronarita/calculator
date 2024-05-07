@@ -1,4 +1,4 @@
-# ch 6.6.7 ctrl.py
+# ch 7.1.3 ctrl.py
 ## UI에서 입력되는 이벤트 처리, UI 동작 제어 관련 내용 포함
 ## calculate, connectSignals 함수 수정
 
@@ -29,5 +29,17 @@ class Control:
         else:
             return "Calculation Error"
 
-    def sum(self, a, b):  # 예외처리 제거 : 향후 calculate 함수에서 처리하도록 구현 예정
+    def sum(self, a, b):
         return a + b
+
+    def sub(self, a, b):  # 뺄셈 함수 추가
+        return a - b
+
+    def mul(self, a, b):  # 곱셈 함수 추가
+        return a * b
+
+    def div(self, a, b):  # 나눗셈 함수 추가
+        return a / b
+
+    def pow(self, a, b):  # 제곱 연산 함수 추가
+        return pow(a, b)
