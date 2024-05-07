@@ -38,7 +38,7 @@ class View(QWidget):
         self.le1.selectAll()  # 텍스트 전체 선택
 
         self.cb = QComboBox(self)
-        self.cb.addItems(["+", "-", "*", "/", "^"])  # 거듭제곱 연산자 추가
+        self.cb.addItems(["+", "-", "*", "/", "^", "%"])  # %연산자 추가
 
         self.le2 = QLineEdit("0", self)  # 라인 에디트2 추가
         self.le2.setAlignment(QtCore.Qt.AlignRight)
