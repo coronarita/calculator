@@ -16,5 +16,8 @@ class Control:
     def calculate(self):  # 내용은 추후 작성
         pass
 
-    def sum(self, a, b):  # 덧셈 함수 추가
-        return a + b
+    def sum(self, a, b):  # 예외 처리 기능 추가
+        try:
+            return str(a + b)
+        except:
+            return "Calculation Error"
