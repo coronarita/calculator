@@ -1,6 +1,5 @@
-# ch 7.5.1 ctrl.py
+# ch 7.5.2 ctrl.py
 ## UI에서 입력되는 이벤트 처리, UI 동작 제어 관련 내용 포함
-## calculate, connectSignals 함수 수정
 
 
 class Control:
@@ -48,5 +47,8 @@ class Control:
 
         return a / b
 
-    def pow(self, a, b):  # 제곱 연산 함수 추가
+    def pow(self, a, b):  # 제곱 연산 함수 수정
+        if a == 0:
+            return 0
+
         return pow(a, b)
