@@ -1,7 +1,7 @@
-# ch 6.3.2 ui.py
+# ch 6.6.1 ui.py
 
 ## main.py의 Calculator 클래스에서 화면정의, 초기화, 에디트 화면처리 분리
-## activateMessage 인자로 받은 text 출력하기
+# 거듭제곱 기능 연산자 추가
 
 from PyQt5.QtWidgets import (
     QApplication,
@@ -38,7 +38,7 @@ class View(QWidget):
         self.le1.selectAll()  # 텍스트 전체 선택
 
         self.cb = QComboBox(self)
-        self.cb.addItems(["+", "-", "*", "/"])
+        self.cb.addItems(["+", "-", "*", "/", "^"])  # 거듭제곱 연산자 추가
 
         self.le2 = QLineEdit("0", self)  # 라인 에디트2 추가
         self.le2.setAlignment(QtCore.Qt.AlignRight)
