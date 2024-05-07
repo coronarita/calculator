@@ -25,6 +25,22 @@ class Control:
 
         if operator == "+":
             return f"{num1} + {num2} = {self.sum(num1, num2)}"
+
+        elif operator == "-":
+            return f"{num1} - {num2} = {self.sub(num1, num2)}"
+
+        elif operator == "*":
+            return f"{num1} * {num2} = {self.mul(num1, num2)}"
+
+        elif operator == "/":
+            return f"{num1} / {num2} = {self.div(num1, num2)}"
+
+        elif operator == "^":
+            return f"{num1} ^ {num2} = {self.pow(num1, num2)}"
+
+        elif operator == "%":
+            return f"{num1} % {num2} = {self.mod(num1, num2)}"
+
         else:
             return "Calculation Error"
 
@@ -56,3 +72,13 @@ class Control:
             return e
 
         return pow(a, b)
+
+    def mod(self, a, b):  # 나머지 연산 함수 추가
+        try:
+            if b == 0:
+                raise Exception("Divisor Error")
+
+        except Exception as e:
+            return e
+
+        return a % b
