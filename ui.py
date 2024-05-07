@@ -1,7 +1,7 @@
-# ch 6.6.1 ui.py
+# ch 7.7.2 ui.py
 
 ## main.py의 Calculator 클래스에서 화면정의, 초기화, 에디트 화면처리 분리
-# 거듭제곱 기능 연산자 추가
+# 라이트 버전을 위해 콤보박스 연산자 ^, % 제거
 
 from PyQt5.QtWidgets import (
     QApplication,
@@ -38,7 +38,8 @@ class View(QWidget):
         self.le1.selectAll()  # 텍스트 전체 선택
 
         self.cb = QComboBox(self)
-        self.cb.addItems(["+", "-", "*", "/", "^", "%"])  # %연산자 추가
+        # self.cb.addItems(["+", "-", "*", "/", "^", "%"])
+        self.cb.addItems(["+", "-", "*", "/"])  # ^, %연산자 제거
 
         self.le2 = QLineEdit("0", self)  # 라인 에디트2 추가
         self.le2.setAlignment(QtCore.Qt.AlignRight)
